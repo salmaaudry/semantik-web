@@ -1,0 +1,9 @@
+/doap.rdf
+/docs/api
+/doctumcache
+/reports
+*.tar.gz
+/vendor
+/composer.phar
+/composer.lock
+/config/.phpunit.result.cache
