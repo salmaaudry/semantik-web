@@ -1,0 +1,151 @@
+@prefix data: <http://learningsparql.com/ns/data#> .
+@prefix j:  <http://learningsparql.com/ns/jurusan#> .
+@prefix f:  <http://learningsparql.com/ns/fakultas#> .
+@prefix u:  <http://learningsparql.com/ns/univ#> .
+
+
+# Jurusan
+j:ti1   data:jurusan j:ti ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:fmipa ; 
+        data:univ u:unpad .
+j:ti2   data:jurusan j:ti ; 
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:stei ; 
+        data:univ u:itb .
+j:ilkom1 data:jurusan j:ilkom ; 
+         data:jenjang "S1" ;
+         data:akreditasi "A" ;
+         data:fakultas f:fasilkom ; 
+         data:univ u:ui .
+j:ilkom2 data:jurusan j:ilkom ; 
+         data:jenjang "S1" ;
+         data:akreditasi "A" ;
+         data:fakultas f:fmipa ; 
+         data:univ u:ipb .
+j:ilkom3 data:jurusan j:ilkom ; 
+         data:jenjang "S1" ;
+         data:akreditasi "B" ;
+         data:fakultas f:fmipa ; 
+         data:univ u:upi .
+j:te1 data:jurusan j:te ;
+        data:jenjang "S1" ;
+        data:akreditasi "B" ;
+        data:fakultas f:fmipa ; 
+        data:univ u:unpad .
+j:te2 data:jurusan j:te ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:stei ; 
+        data:univ u:itb .
+j:te3 data:jurusan j:te ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:ft ; 
+        data:univ u:ui .
+j:te4 data:jurusan j:te ;
+        data:jenjang "S1" ;
+        data:akreditasi "B" ;
+        data:fakultas f:fptk ; 
+        data:univ u:upi .
+j:arsi1 data:jurusan j:arsi ; 
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:ft ; 
+        data:univ u:ui . 
+j:arsi2 data:jurusan j:arsi ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:sappk ; 
+        data:univ u:itb .
+j:arsi3 data:jurusan j:arsiLanskap ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:faperta ; 
+        data:univ u:ipb .
+j:pwk1 data:jurusan j:pwk ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:sappk ; 
+        data:univ u:itb .
+j:pwk2 data:jurusan j:pwk ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:ft ; 
+        data:univ u:ui .
+j:agro1 data:jurusan j:agro ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:faperta ; 
+        data:univ u:unpad .
+j:agri1 data:jurusan j:agribisnis ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:faperta ; 
+        data:univ u:unpad .
+j:farmasi1 data:jurusan j:farmasi ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:ff ; 
+        data:univ u:unpad .
+j:farmasi2 data:jurusan j:farmasi ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:ff ; 
+        data:univ u:itb .
+j:farmasi3 data:jurusan j:farmasi ;
+        data:jenjang "S1" ;
+        data:akreditasi "A" ;
+        data:fakultas f:ff ; 
+        data:univ u:ui .
+
+# Nama Jurusan
+j:ti data:namaJurusan "Teknik Informatika" .
+j:arsi data:namaJurusan "Arsitektur" .
+j:arsiLanskap data:namaJurusan "Arsitektur Lanskap" .
+j:fis data:namaJurusan "Fisika" .
+j:kim data:namaJurusan "Kimia" .
+j:bio data:namaJurusan "Biologi" .
+j:te data:namaJurusan "Teknik Elektro" .
+j:ilkom data:namaJurusan "Ilmu Komputer" .
+j:tekind data:namaJurusan "Teknik Industri" .
+j:tm data:namaJurusan "Teknik Teknik Mesin" .
+j:pwk data:namaJurusan "Perencanaan Wilayah dan Kota" .
+j:farmasi data:namaJurusan "Farmasi" .
+j:agro data:namaJurusan "Agroteknologi" .
+j:agribisnis data:namaJurusan "Agribisnis" .
+
+# Fakultas
+f:fmipa data:namaFakultas "Fakultas Matematika dan Ilmu Pengetahuan Alam" .
+f:ft data:namaFakultas "Fakultas Teknik" .
+f:stei data:namaFakultas "Sekolah Teknik Elektro dan Informatika" .
+f:sappk data:namaFakultas "Sekolah Arsitektur, Pembangunan, dan Perencanaan Kebijakan" .
+f:fti data:namaFakultas "Fakultas Teknik Industri" .
+f:ff data:namaFakultas "Fakultas Farmasi" .
+f:faperta data:namaFakultas "Fakultas Pertanian" .
+f:fasilkom data:namaFakultas "Fakultas Ilmu Komputer" .
+f:fptk data:namaFakultas "Fakultas Pendidikan Teknologi dan Kejuruan" .
+
+# Univ
+u:unpad data:namaUniv "Universitas Padjadjaran" ;
+        data:namaUnivEng "Padjadjaran_University";
+        data:akreditasi "A";
+        data:wikiLink <https://id.wikipedia.org/wiki/Universitas_Padjadjaran> .
+u:ui    data:namaUniv "Universitas Indonesia" ;
+        data:namaUnivEng "University_of_Indonesia";
+        data:akreditasi "A";
+        data:wikiLink <https://id.wikipedia.org/wiki/Universitas_Indonesia>.
+u:itb   data:namaUniv "Institut Teknologi Bandung";
+        data:namaUnivEng "Bandung_Institute_of_Technology";
+        data:akreditasi "A";
+        data:wikiLink <https://id.wikipedia.org/wiki/Institut_Teknologi_Bandung>.
+u:upi   data:namaUniv "Universitas Pendidikan Indonesia";
+        data:namaUnivEng "Indonesia_University_of_Education";
+        data:akreditasi "A";
+        data:wikiLink <https://id.wikipedia.org/wiki/Universitas_Pendidikan_Indonesia>.
+u:ipb   data:namaUniv "Institut Pertanian Bogor";
+        data:namaUnivEng "IPB_University";
+        data:akreditasi "A";
+        data:wikiLink <https://id.wikipedia.org/wiki/Institut_Pertanian_Bogor>.
