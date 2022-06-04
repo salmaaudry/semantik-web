@@ -31,7 +31,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Jurusan</title>
+    <title>Jurusan di <?php echo($univ_name) ?></title>
 </head>
 <?php include('layouts/nav.php')?>
 <body>
