@@ -1,7 +1,5 @@
 <?php
     require 'vendor/autoload.php';
-
-    \EasyRdf\RdfNamespace::set('rdf', 'http://www.w3.org/1999/02/22-rdf-syntax-ns#');
     \EasyRdf\RdfNamespace::set('d', 'http://learningsparql.com/ns/data#');
     
     $jena_endpoint ='http://localhost:3030/data3/query';
@@ -9,11 +7,12 @@
     if(isset($_POST['keywordbutton'])){
         $param = $_POST['keyword'];
         $sparql_query = "
-        SELECT ?univ ?namaJurusan ?akreditasi ?namaFakultas ?namaUniv ?namaUnivEng
+        SELECT ?namaJurusan ?akreditasi ?namaFakultas ?namaUniv ?jenjang ?namaUnivEng
         WHERE
         {
           ?j d:jurusan ?jurusan;
              d:akreditasi ?akreditasi;
+             d:jenjang ?jenjang;
              d:fakultas ?fakultas;
              d:univ ?univ.
           ?jurusan d:namaJurusan ?namaJurusan.
@@ -43,9 +42,6 @@
 
         // $result_row = $sparql_jena->query($sparql_query_count);
 
-    }else{
-        $result = [];
-        $param = "";
     }
     // $param = $_GET['keyword'];
     
@@ -113,6 +109,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Jurusan</th>
+                                <th>Jenjang</th>
                                 <th>Akreditasi</th>
                                 <th>Fakultas</th>
                                 <th>Universitas</th>
@@ -124,6 +121,7 @@
                             <tr style="text-align:center">
                                 <td><?= $count += 1 ?></td>
                                 <td><?= $row->namaJurusan ?></td>
+                                <td><?= $row->jenjang ?></td>
                                 <td><?= $row->akreditasi ?></td>
                                 <td><?= $row->namaFakultas ?></td>
                                 <td><a href="detail_univ.php?q=<?= $row->namaUnivEng ?>"><?= $row->namaUniv ?></a></td>

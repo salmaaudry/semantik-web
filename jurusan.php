@@ -7,11 +7,12 @@
     $jena_endpoint ='http://localhost:3030/data3/query';
     $sparql_jena = new \EasyRdf\Sparql\Client($jena_endpoint);
     $sparql_query = "
-        SELECT ?univ ?namaJurusan ?akreditasi ?namaFakultas ?namaUniv ?namaUnivEng
+        SELECT ?namaJurusan ?jenjang ?akreditasi ?namaFakultas ?namaUniv ?namaUnivEng
         WHERE
         {
           ?j d:jurusan ?jurusan;
              d:akreditasi ?akreditasi;
+             d:jenjang ?jenjang;
              d:fakultas ?fakultas;
              d:univ ?univ.
           ?jurusan d:namaJurusan ?namaJurusan.
@@ -38,6 +39,7 @@
                 <tr>
                     <th>No</th>
                     <th>Jurusan</th>
+                    <th>Jenjang</th>
                     <th>Akreditasi</th>
                     <th>Fakultas</th>
                     <th>Universitas</th>
@@ -48,6 +50,7 @@
                 <tr style="text-align:center">
                     <td><?= $count += 1 ?></td>
                     <td><?= $row->namaJurusan ?></td>
+                    <td><?= $row->jenjang ?></td>
                     <td><?= $row->akreditasi ?></td>
                     <td><?= $row->namaFakultas ?></td>
                     <td><a href="detail_univ.php?q=<?= $row->namaUnivEng ?>"><?= $row->namaUniv ?></a></td>
